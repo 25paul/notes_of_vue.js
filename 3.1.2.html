@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.1.2、纯HTML</title>
+</head>
+<body>
+<div id="app">
+  <span>{{message}}</span>
+  <p v-html='text'></p>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!',
+	    text: '<ol><li>i am from JY</li><li>i love GD!</li></ol>'
+	  }
+	})
+</script>
+</body>
+</html>

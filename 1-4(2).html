@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4条件与循环</title>
+</head>
+<body>
+<div id="app">
+  <ul v-for='message in messages'>
+  	<li>{{message.text}}</li>
+  </ul>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    messages:[
+	    	{text:'vue.js'},
+	    	{text:'react.js'},
+	    	{text:'angular.js'}
+	    ]
+	  }
+	})
+</script>
+</body>
+</html>
+<!-- 
+在控制台里，输入 app.messages.push({text:'ember.js'})。你会发现列表中多了一栏新内容。
+ -->

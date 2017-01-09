@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-5处理用户输入</title>
+</head>
+<body>
+<div id="app">
+	<p>{{text}}</p>
+	<input v-model='text'></input>
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			text:'it is crazy!'
+		}
+	})
+</script>
+</body>
+</html>

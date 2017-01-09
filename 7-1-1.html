@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7.1.1、基本用法</title>
+</head>
+<body>
+<div id="app">
+  <ul v-for='(message,index) of messages'>
+  	<li>{{number}} {{index}} : {{message.text}}</li>
+  </ul>
+  <ul v-for='message of messages'>
+  	<li>{{message.text}}</li>
+  </ul>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    messages:[
+	    	{text:'vue.js'},
+	    	{text:'react.js'},
+	    	{text:'angular.js'}
+	    ],
+	    number:'number'
+	  }
+	})
+</script>
+</body>
+</html>

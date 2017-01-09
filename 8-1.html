@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8.1、监听事件</title>
+</head>
+<body>
+<div id="app">
+	<button v-on:click = 'add()'>app one</button><br/>
+	<p>点击按钮啊，就可以+1了：{{count1}}</p>
+	<br/>
+	<span>换个方式：</span><button v-on:click="count2 += 1">+1={{count2}}</button>
+</div>
+
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			count1:0,
+			count2:0
+		},
+		methods:{
+			add:function(){
+				this.count1++
+			}
+		}
+	})
+</script>
+</body>
+</html>

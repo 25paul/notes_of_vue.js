@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5.1.2、数组语法</title>
+	<style type="text/css">
+		.first{
+			color: red;
+		}
+		.second{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<p v-bind:class = "[aClass,bClass]">first</p>
+	<p v-bind:class = "[{ first: isActive }, bClass]">second</p>
+</div>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			isActive:false,
+			aClass:'first',
+			bClass:'second'
+		}
+	})
+</script>
+</body>
+</html>

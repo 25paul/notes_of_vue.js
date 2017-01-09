@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-3生命周期</title>
+</head>
+<body>
+<div id="app">
+	<p>{{a}} + {{b}} = {{c}}</p>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+	el:'#app',
+	data:{
+		a:1,
+		b:2,
+		c:''
+	},
+	created:function(){
+		this.c = this.a + this.b
+	}
+})
+</script>
+</body>
+</html>

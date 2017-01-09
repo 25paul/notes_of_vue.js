@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4用组件构建（应用）</title>
+</head>
+<body>
+<div id="app">
+  <ul>
+  	<li v-for='message in messages'>{{message.text}}</li>
+  </ul>
+  <ol>
+  	<create v-for='message in messages' v-bind:item='message'></create>
+  </ol>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('create',{
+    	props:['item'],
+    	template:'<li>{{item.text}}</li>'
+    })
+
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    messages:[
+	    	{text:'vue.js'},
+	    	{text:'react.js'},
+	    	{text:'angular.js'}
+	    ]
+	  }
+	})
+</script>
+</body>
+</html>
+<!-- 
+子元素通过 props 接口实现了与父亲元素很好的解耦。我们现在可以在不影响到父应用的基础上，进一步为我们的 create 组件改进更多复杂的模板和逻辑。
+ -->

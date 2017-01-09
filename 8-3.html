@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8.3、内联处理器方法</title>
+</head>
+<body>
+<div id="app">
+	<button v-on:click="say('vue.js')">vue</button>
+    <button v-on:click="say('react.js')">react</button>
+</div>
+
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			name:'Vue.js'
+		},
+		methods:{
+	      	say: function (message) {
+		        alert(message)
+		    }
+		}
+	})
+</script>
+</body>
+</html>

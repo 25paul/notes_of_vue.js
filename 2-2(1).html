@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-2属性与方法</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+var data={a:1}
+var app = new Vue({
+	el:'#app',
+	data:data
+})
+console.log(app.$data === data );
+console.log(app.$el === document.getElementById('app'));
+app.$watch('a', function (newVal, oldVal) {
+  // 这个回调将在 `vm.a`  改变后调用
+})
+</script>
+</body>
+</html>
+
+<!-- 
+注意，不要在实例属性或者回调函数中（如 vm.$watch('a', newVal => this.myMethod())）使用箭头函数。因为箭头函数绑定父上下文，所以 this 不会像预想的一样是 Vue 实例，而是 this.myMethod 未被定义。
+ -->

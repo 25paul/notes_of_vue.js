@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9.1.1、文本</title>
+</head>
+<body>
+<div id="app">
+	<p>look:{{text}}</p>
+	<input v-model='text' placeholder="edit me"></input>
+</div>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			text:''
+		}
+	})
+</script>
+</body>
+</html>

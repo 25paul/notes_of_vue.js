@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9.2.1、复选框</title>
+</head>
+<body>
+<div id="app">
+	<input
+	  type="checkbox"
+	  v-model="toggle"
+	  v-bind:true-value="a"
+	  v-bind:false-value="b"
+	>
+</div>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			toggle:false,
+			a:true,
+			b:'react'
+		}
+	})
+	console.log(app.toggle === app.a)
+	
+</script>
+</body>
+</html>

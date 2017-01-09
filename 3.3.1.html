@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.3.1、过滤器</title>
+</head>
+<body>
+<div id="app">
+  {{ message | capitalize }} <br/> {{text | filterFun('RC','YH')}}
+</div>
+
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!',
+	    text: 'i am from JY'
+	  },
+	  filters: {
+    	capitalize: function (value) {
+      		if (!value) return '';
+      		value = value.toString();
+      		return value.toUpperCase();
+        },
+        filterFun: function (value,sta1,sta2) {  
+      		if (!value) return '';
+      		value = value.toString();
+      		return value + '.' + sta1 + '.' + sta2
+    	}
+      }
+	})
+</script>
+</body>
+</html>
+
+<!-- 
+value就是message的值
+ -->

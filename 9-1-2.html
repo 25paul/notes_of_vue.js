@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9.1.2、多行文本</title>
+</head>
+<body>
+<div id="app">
+	<textarea  v-model='text' placeholder="edit me"></textarea >
+	<p style="white-space: pre">look:<br/>{{text}}</p>
+</div>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			text:''
+		}
+	})
+</script>
+</body>
+</html>
+
+<!-- 
+在文本区域插值( <textarea></textarea> ) 并不会生效，应用 v-model 来代替
+ -->

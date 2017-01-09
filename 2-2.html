@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-2属性与方法</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+var data={a:1}
+var app = new Vue({
+	el:'#app',
+	data:data,
+	created:function(){
+		alert(this.a);
+	}
+})
+console.log(app.a === data.a);
+app.a = 2;
+console.log(data.a);
+data.a = 3;
+console.log(app.a);
+</script>
+</body>
+</html>
+
+<!-- 
+注意只有这些被代理的属性是响应的。如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。
+ -->

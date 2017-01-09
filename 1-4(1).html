@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4条件与循环</title>
+</head>
+<body>
+<div id="app">
+  <p v-if="seen">i love Front and End</p>
+  <p v-if="what">Hello Vue!</p>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    seen:true,
+	    what:'false'
+	  }
+	})
+</script>
+</body>
+</html>
+
+<!-- 
+绑定 DOM 结构到数据
+ -->

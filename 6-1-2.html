@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6.1.2、v-else</title>
+</head>
+<body>
+<div id="app">
+  	<div v-if="Math.random() > 0.5">
+	  Sorry
+	</div>
+	<div v-else>
+	  Not sorry
+	</div>
+	<div>
+		<p v-if='or < 0.3'>vue.js</p>
+		<p v-else-if='or < 0.6'>angular.js</p>
+		<p v-else>react.js</p>
+	</div>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			or:Math.random()
+		},
+		created:function(){
+			console.log(Math.random())
+		}
+	})
+</script>
+</body>
+</html>
+
+<!-- 
+script的执行和html的渲染是不同步的，所以两个的math.random()不一样。
+ -->

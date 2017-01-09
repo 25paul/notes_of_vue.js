@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5.1.1、对象语法</title>
+	<style type="text/css">
+		.first{
+			color: red;
+		}
+		.second{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<p v-bind:class = {first:isActve}>first</p>
+	<p v-bind:class = {first:isActve,second:isErr}>first and second</p>
+	<p v-bind:class = classObject>first and second</p>
+</div>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			isActve:true,
+			isErr:false,
+			classObject:{
+				first:this.isActve,
+				second:this.isErr = true
+			}
+		}
+	})
+</script>
+</body>
+</html>

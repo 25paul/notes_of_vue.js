@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-3声明式渲染</title>
+</head>
+<body>
+<div id="app">
+  {{ message }} <br/> {{text}}
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: 'Hello Vue!',
+	    text: 'i am from JY'
+	  }
+	})
+</script>
+</body>
+</html>
+<!-- 
+这样数据和 DOM 已经被绑定在一起，所有的元素都是响应式的。我们如何知道？打开你的浏览器的控制台，并修改 app.message，你将看到上例相应地更新。
+ -->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9.1.3、复选框</title>
+</head>
+<body>
+<div id="app">
+	<input type="checkbox" id="vue" value="vue" v-model="checkedNames">
+	<label for="vue">vue</label>
+	<input type="checkbox" id="react" value="react" v-model="checkedNames">
+	<label for="react">react</label>
+	<input type="checkbox" id="angular" value="angular" v-model="checkedNames">
+	<label for="angular">angular</label>
+	<br>
+	<span>Checked names: {{ checkedNames }}</span>
+</div>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+			checkedNames:[]
+		}
+	})
+</script>
+</body>
+</html>
+
+<!-- 
+主要是在value，如果把value值去掉，这会是
+ -->
